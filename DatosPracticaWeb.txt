@@ -1,0 +1,6 @@
+"autor": "Sara Hidalgo i Adrià Sánchez",
+"titulo": "Els Meus Viatges",
+"srcimg": ""
+"alt": "Previsualització de la web Els Meus Viatges",
+"texto": "És una web personal on apareixen fotografies de viatges que hem visitat”,
+"url": ""

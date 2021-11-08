@@ -1,0 +1,231 @@
+/*Autors: Sara Hidalgo i Adrià Sánchez*/
+
+
+* { /*característiques generals*/
+    box-sizing: border-box;
+    padding: 10px;
+    box-sizing:border-box;
+    background-color:#cee1e4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth; /*efecte d'escroll quan apretem un botó del menú*/
+  }
+
+/*----------CAPÇALERA----------*/
+
+.logo{
+    width: 130px;
+    float: left;
+    background: none;
+    vertical-align: middle;
+    padding-top: 30px;
+}
+h1 {
+    text-align: left;
+    font-size: 350%;
+    
+}
+
+/*----------MENÚ HAMBURGUESA----------*/
+
+ul{
+    display: none;
+    margin-top:0;
+    padding: 0;
+    width: 200px;
+}
+
+
+li a{
+    text-decoration: none;
+    background-color:#f5b885;
+    border-radius: 80px;
+    color: rgb(0, 0, 0);
+    
+    
+}
+
+input:checked  ~ ul{
+    display:block;
+  }
+
+input {
+    display: none;
+  }
+
+label{
+    box-sizing: border-box;
+    font-size: 200%;
+    border: 1px solid black;
+    border-radius: 20%;
+    
+}
+
+/*----------GALERIA D'IMATGES----------*/
+
+/*disposició de les imatges*/
+
+.llocs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    grid-gap: 1.5rem;
+}
+
+.lloc{
+    flex: 1 1 40%;
+    text-align: justify;
+    overflow: hidden;
+    transition: all 500ms ease;
+    
+}
+
+
+article {
+    display: flex;
+    flex-flow: column;
+    background: white;
+    padding: 10px;
+    border-radius: 30px;
+    
+  }
+
+/*característiques de les imatges*/
+
+img{
+    align-self: center;
+    width: 100%;
+    border-radius: 30px;
+    background-color:white;
+
+  }
+
+.lloc img{
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.lloc img:hover{
+    transform: scale(0.9);
+}
+
+/*----------CARACTERÍSTIQUES TEXTOS----------*/
+
+i{ /*cursiva*/
+    background-color:white;
+    font-size: 25px;
+}
+
+b{ /*negreta*/
+    background-color:white;
+    font-size: 25px;
+}
+.textos{
+    background-color:white;
+    font-size: 25px;
+}
+    
+h2{
+background-color: rgba(255, 255, 255, 0.74) ; 
+color: black;
+font-size: 200%;
+border-radius: 10px;
+text-align: center;
+}
+
+h3 {
+    display: block;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin-top: auto;
+}
+
+/*----------FOOTER----------*/
+
+footer{/*tamany del footer, color, tipografia*/
+    width: 100%;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius:20px ;
+} 
+h4{
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+}
+
+.insta{
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+}
+
+/*----------MODIFICACIONS PANTALLA MÒBIL----------*/
+
+@media  (max-width: 600px) {
+    .menu_burger { /*utilitzem menú hamburguesa*/
+        line-height: 50px;
+        font-size: 150%;
+        text-align: left;
+        padding-top: 20px; 
+        text-decoration: none;
+        list-style: none;    }
+    .menu1{
+        height: 300%;
+        
+    }
+    .logo{ /*desapareix el logo*/
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;  
+    }
+}
+
+/*----------MODIFICACIONS PANTALLA TABLET I ORDINADOR----------*/
+
+@media (min-width: 601px){
+    .menu_burger{ /*desapareix el menú hamburguesa*/
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+
+    }
+
+    .menu1 {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .menuviajes{ /*utilitzem un menú desplegat*/
+        list-style: none;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        color: rgb(0, 0, 0);
+        font-size: 200%;
+        padding: 25px ;
+        margin-inline: 20px; 
+        
+    }
+
+    .menuviajes li{
+        display:inline-block;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 80px;
+        background-color: #f5b885;  
+        
+    }
+
+    .menuviajes :hover{
+        background-color: #eaabbc;
+
+    }
+}
